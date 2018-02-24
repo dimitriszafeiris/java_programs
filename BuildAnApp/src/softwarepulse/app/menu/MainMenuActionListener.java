@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import org.apache.log4j.Logger;
 
 import softwarepulse.app.ShipLog;
+import softwarepulse.app.dialog.About_Dialog;
 
 /**
  * @author John McNeil
@@ -27,11 +28,15 @@ public class MainMenuActionListener implements ActionListener {
 	 */
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
 		log.info("Menu event generated: " + arg0.toString());
 		if(arg0.getActionCommand().equals("Exit")) {
 			log.info("Exit button pressed");
 			app.dispose();
+		}
+		if(arg0.getActionCommand().equals("About")) {
+			log.info("About button pressed");
+			About_Dialog about_Dialog = new About_Dialog();
+			about_Dialog.setVisible(true);
 		}
 	}
 

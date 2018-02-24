@@ -77,7 +77,6 @@ public class ShipLog extends JFrame {
 				app.setVisible(true);
 				
 			}
-		});
-	}
+		});	}
 
 }
